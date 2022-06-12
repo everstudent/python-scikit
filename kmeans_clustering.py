@@ -1,6 +1,6 @@
 # init KMeans model
 from sklearn.cluster import KMeans
-model = KMeans(n_clusters=3, random_state=100)
+model = KMeans(n_clusters=3)
 
 
 # load libs
@@ -13,17 +13,11 @@ import matplotlib.pyplot as plt
 df = pd.DataFrame({'x': np.random.randint(1, 100, 25), 'y': np.random.randint(1, 100, 25)}, columns=['x', 'y'])
 
 
-# scale 
-from sklearn.preprocessing import MinMaxScaler
-scaler = MinMaxScaler()
-df_scaled = pd.DataFrame(scaler.fit_transform(df), columns=['x', 'y'])
+# cluster
+clustered = model.fit_predict(df)
 
 
-# clusterize
-clustered = model.fit_predict(df_scaled)
-
-
-# plt.scatter(df['x'], df['y'])
-plt.scatter(df_scaled['x'], df_scaled['y'], c=clustered)
-plt.savefig('kmeans_clestering.png')
+# plot results
+plt.scatter(df['x'], df['y'], c=clustered)
+plt.savefig('kmeans_clustering.png')
 plt.show()
