@@ -17,3 +17,9 @@ Python science kit usage examples
 [Lineare regression usage](/linear_regression.py)
 
 ![Linear Regression](/linear_regression.png)
+
+
+## Polynomial Linear regression
+[Polynomial lineare regression usage](/polynomial_regression.py)
+
+![Pplynomial Liner Regression](/polynomial_regression.png)
