@@ -22,4 +22,4 @@ Python science kit usage examples
 ## Polynomial Linear regression
 [Polynomial lineare regression usage](/polynomial_regression.py)
 
-![Pplynomial Liner Regression](/polynomial_regression.png)
+![Polynomial Liner Regression](/polynomial_regression.png)
